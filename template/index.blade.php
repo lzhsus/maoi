@@ -3,7 +3,7 @@
 <head>
     <meta charset=utf-8>
     <base href=//1434253600.xyz/html/zl/ >    
-    <title>租赁商城</title>
+    <title>MAOI</title>
     <meta name=format-detection content="telephone=no, address=no, email=no">
     <meta name=viewport content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=0">
     <meta name=apple-mobile-web-app-status-bar-style content=black>

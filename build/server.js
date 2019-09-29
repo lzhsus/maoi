@@ -59,7 +59,7 @@ webpackDevMiddlewareInstance.waitUntilValid(() => {
   console.log('Package is in a valid state');
 });
 
-app.listen(3003, function (res) {
-  console.log('Serve the files on port 3003.\n');
+app.listen(3004, function (res) {
+  console.log('Serve the files on port 3004.\n');
 });
 

@@ -26,7 +26,6 @@
                         <div class="swiper-slide">
 	            			<img src="static/images/gif/2097615.gif" alt="" srcset="">
                             <img src="static/images/gif/5.jpg" alt="" srcset="">
-  
                         </div>
                         <div class="swiper-slide">
 	            			<img src="static/images/gif/2097617.gif" alt="" srcset="">
@@ -56,6 +55,7 @@
 	            </div>
                 <tabbar :seleid="seleid"></tabbar>
             </div>
+            <div class="yuan"></div>
         </div>
     </div>
 </template>
@@ -138,6 +138,9 @@ export default {
                 }
             }
         }
+    }
+    .yuan{
+        
     }
 }
 </style>

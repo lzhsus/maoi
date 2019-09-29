@@ -1,32 +1,70 @@
 <!DOCTYPE html>
 <html lang=zh-CN>
+
 <head>
-    <meta charset=utf-8>
-    <meta property=wb:webmaster content=9aabdd3c4eb22c43>
-    
-    <title>MAOI</title>
-    <meta name=format-detection content="telephone=no, address=no, email=no">
-    <meta name=viewport content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=0">
-    <meta name=apple-mobile-web-app-status-bar-style content=black>
-    <meta name=apple-mobile-web-app-capable content=yes>
-    
-    <script>
-    </script>
-<link href=./dist/css/common.css?cfe3e57d3d74cd2cfd78 rel=stylesheet><link href=./dist/css/index.css?cfe3e57d3d74cd2cfd78 rel=stylesheet></head>
+	<meta charset=utf-8>
+	<meta property=wb:webmaster content=9aabdd3c4eb22c43>
+	<meta name=msapplication-tap-highlight content=no>
+	
+	<title>MAOI</title>
+	<meta name=format-detection content="telephone=no, address=no, email=no">
+	<meta name=viewport content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=0">
+	<meta name=apple-mobile-web-app-status-bar-style content=black>
+	<meta name=apple-mobile-web-app-capable content=yes>
+	
+	<script>
+	</script>
+<link href=./dist/css/common.css?1ea82b3ff3329bf34a01 rel=stylesheet><link href=./dist/css/index.css?1ea82b3ff3329bf34a01 rel=stylesheet></head>
 
 <body>
-   <div id=app></div>
-   
-   <script type=text/javascript src=https://res.wx.qq.com/open/js/jweixin-1.3.2.js></script>
-   <script>
-    var _hmt = _hmt || [];
-    (function() {
-      var hm = document.createElement("script");
-      hm.src = "https://hm.baidu.com/hm.js?1ac5ed48e35bc67c2b858a2c934ccba7";
-      var s = document.getElementsByTagName("script")[0]; 
-      s.parentNode.insertBefore(hm, s);
-    })();
-    </script>
-    
-<script type=text/javascript src=./dist/js/common.js?cfe3e57d3d74cd2cfd78></script><script type=text/javascript src=./dist/js/index.js?cfe3e57d3d74cd2cfd78></script></body>
+	<div id=app></div>
+	<script src=https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js></script>
+	<script type=text/javascript src=https://res.wx.qq.com/open/js/jweixin-1.3.2.js></script>
+	<script>
+		var _hmt = _hmt || [];
+		(function () {
+			var hm = document.createElement("script");
+			hm.src = "https://hm.baidu.com/hm.js?1ac5ed48e35bc67c2b858a2c934ccba7";
+			var s = document.getElementsByTagName("script")[0];
+			s.parentNode.insertBefore(hm, s);
+		})();
+	</script>
+	<script>
+		(function () {
+			var supportOrientation = (typeof window.orientation === 'number' &&
+				typeof window.onorientationchange === 'object');
+			var init = function () {
+				var htmlNode = document.body.parentNode,
+					orientation;
+				var updateOrientation = function () {
+					console.log('---',supportOrientation,window.innerWidth,window.innerHeight)
+					if (supportOrientation) {
+						orientation = window.orientation;
+						switch (orientation) {
+							case 90:
+							case -90:
+								orientation = 'landscape';
+								break;
+							default:
+								orientation = 'portrait';
+								break;
+						}
+					} else {
+						orientation = (window.innerWidth > window.innerHeight) ? 'landscape' : 'portrait';
+					}
+					htmlNode.setAttribute('class', orientation);
+				};
+				if (supportOrientation) {
+					window.addEventListener('orientationchange', updateOrientation, false);
+				} else {
+					//监听resize事件
+					window.addEventListener('resize', updateOrientation, false);
+				}
+				updateOrientation();
+			};
+			window.addEventListener('DOMContentLoaded', init, false);
+		})();
+	</script>
+<script type=text/javascript src=./dist/js/common.js?1ea82b3ff3329bf34a01></script><script type=text/javascript src=./dist/js/index.js?1ea82b3ff3329bf34a01></script></body>
+
 </html>

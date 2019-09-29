@@ -44,3 +44,11 @@
 .show{
 	display:block;
 }
+.mt-range{
+    .mt-range-content{
+        .mt-range-thumb{
+			background: url(/static/images/jt.png) center center no-repeat;
+			background-size: contain;
+        }
+    }
+}

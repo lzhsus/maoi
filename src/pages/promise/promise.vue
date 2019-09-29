@@ -1,9 +1,8 @@
 <template>
-    <div class="text" id="main">
+    <div class="text" id="promise">
         <div class="text-content">
-            <!-- <div class="gather-title">MAOI</div> -->
             <div class="text-maddle">
-                <tabbar :seleid="seleid"></tabbar>
+                
             </div>
         </div>
     </div>
@@ -19,22 +18,16 @@ import Swiper from "static/js/swiper.min.js";
 import { setTimeout, setInterval } from 'timers';
 // 组件
 import headTop from "components/headTop";
-import tabbar from "components/tabbar";
 export default {
     data(){
         return{
-            seleid:2,
             navLi:1,
             banners:[],
         }
     },
     components:{
-          tabbar
     },
     methods:{
-        navBtn(id){
-            this.navLi=id
-        },
 
     },
     mounted(){
@@ -43,7 +36,7 @@ export default {
 }
 </script>
 <style lang="less" scoped>
-#text{
+#promise{
     width: 100%;height: 100%;
     display: flex;
     flex-direction: column;
@@ -66,22 +59,6 @@ export default {
             display: flex;
             flex-direction: column;
             flex: 1;
-            .nav-ul{
-                width: 100%;height: 80px;
-                display: flex;justify-content: space-around;align-items: center;
-                margin-bottom: 12px;
-                li{
-                    width: 20%;height: 100%;
-                    text-align: center;line-height: 80px;
-                    font-size: 14Px;color: #000;
-                    border-bottom: 1px solid rgba(230, 227, 227, 0);
-                    &.active{
-                        color: orange;
-                        border-bottom: 1px solid orange;
-                    }
-                }
-            }
-
         }
     }
 }

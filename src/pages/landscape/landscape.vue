@@ -125,7 +125,8 @@ export default {
             var image = new Image();
             image.src = canvas.toDataURL("image/png");
             return image;
-        }
+        },
+        
     },
     
     mounted(){

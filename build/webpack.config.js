@@ -93,7 +93,8 @@ var plugins = [
     createjs: 'static/js/createjs/createjs.min.js', 
     tracking: 'src/vendor/tracking/tracking', 
     vueApp: 'src/app', 
-    components: 'src/components'
+    components: 'src/components',
+    vendor:'src/vendor'
   }),
   new webpack.optimize.ModuleConcatenationPlugin(),
   new webpack.LoaderOptionsPlugin({

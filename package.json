@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "acorn": "^6.2.0",
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "babel-runtime": "^6.26.0",
     "cropper": "^3.1.4",
     "jquery": "^2.2.4",
